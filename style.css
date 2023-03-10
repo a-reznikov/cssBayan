@@ -28,30 +28,24 @@ body {
 .item__container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0.5em 0;
   border-top: 0.1em solid gray;
   cursor: pointer;
 }
 
-.item__top {
-  display: flex;
-  flex-basis: 100%;
-  justify-content: space-between;
-}
-
-.item__bottom {
-  display: flex;
-  flex-basis: 100%;
-  justify-content: center;
-  padding-top: 0.5em;
-}
 
 .item__title {
+  flex-basis: 90%;
   flex-grow: 1;
 }
 
 .mem__img {
   width: 80%;
+  padding-top: 0.5em;
+  transition: all .3s;
+  opacity: 0;
+  height: 0;
 }
 
 .item__icon {
@@ -59,17 +53,55 @@ body {
   height: 1em;
   background-image: url("./assets/icons/cancel.svg");
   transform: rotate(45deg);
-  transition: all .5s;
+  transition: all .3s;
+  opacity: 0;
 }
 
 .radio__button {
-  display: block;
+  display: none;
 }
 
-/* #mem_2:checked + .item__icon {
-  transform: rotate(-45deg);
+.accordion__container:hover .icon_1,
+.accordion__container:hover .icon_2,
+.accordion__container:hover .icon_3 {
+  height: 1em;
+  transition: all .3s;
+  opacity: 1;
 }
 
-#mem_3:checked + .item__container {
+.item__container:hover .img_1,
+.item__container:hover .img_2,
+.item__container:hover .img_3 {
+  height: auto;
+  opacity: 1;
+  transition: all .3s;
+}
+
+.item__container:hover .icon_1,
+.item__container:hover .icon_2,
+.item__container:hover .icon_3 {
+  transform: rotate(0deg);
+  transition: all .3s;
+}
+
+#mem_1:checked ~ .icon_1,
+#mem_2:checked ~ .icon_2,
+#mem_3:checked ~ .icon_3 {
+  transform: rotate(0deg);
+  transition: all .3s;
+}
+
+#mem_1:checked ~ .img_1,
+#mem_2:checked ~ .img_2,
+#mem_3:checked ~ .img_3 {
+  height: auto;
+  opacity: 1;
+  transition: all .3s;
+}
+
+
+
+
+/* #mem_3:checked + .item__container {
   background: #f12312;
-} */
+} */ 
