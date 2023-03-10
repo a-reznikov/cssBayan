@@ -4,7 +4,7 @@
 
 body {
   height: 100vh;
-  background: greenyellow;
+  background: #ffffff;
   margin: 0;
   padding: 0;
 }
@@ -12,21 +12,25 @@ body {
 .wrapper {
   max-width: 60%;
   margin: 0 auto;
-  background: blueviolet;
+  background: rgb(218, 218, 218);
 }
 
 .title {
   font-size: 2.0em;
+  margin: 0.5em 0;
 }
 
 .accordion__container {
-  background: grey;
+  background: rgb(218, 218, 218);
   padding: 5%;
 }
 
 .item__container {
   display: flex;
   flex-wrap: wrap;
+  padding: 0.5em 0;
+  border-top: 0.1em solid gray;
+  cursor: pointer;
 }
 
 .item__top {
@@ -39,25 +43,33 @@ body {
   display: flex;
   flex-basis: 100%;
   justify-content: center;
+  padding-top: 0.5em;
 }
 
 .item__title {
   flex-grow: 1;
 }
 
-.item__mem {
-  width: 200px;
-  height: 200px;
-  background-image: url("./assets/mems/mem1.webp");
-  background-size: cover;
+.mem__img {
+  width: 80%;
 }
 
 .item__icon {
   width: 1em;
   height: 1em;
   background-image: url("./assets/icons/cancel.svg");
+  transform: rotate(45deg);
+  transition: all .5s;
 }
 
 .radio__button {
-  cursor: pointer;
+  display: block;
 }
+
+/* #mem_2:checked + .item__icon {
+  transform: rotate(-45deg);
+}
+
+#mem_3:checked + .item__container {
+  background: #f12312;
+} */
