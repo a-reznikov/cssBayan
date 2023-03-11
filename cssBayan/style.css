@@ -162,6 +162,9 @@ body {
   .wrapper {
     max-width: 70%;
   }
+  .mem__img {
+    width: 50%;
+  }
   .title {
     font-size: 3.0em;
   }
