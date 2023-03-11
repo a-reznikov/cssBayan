@@ -13,16 +13,15 @@ body {
 .wrapper {
   max-width: 60%;
   margin: 0 auto;
-  background: rgb(218, 218, 218);
+  background: #ebe5e5;
 }
 
 .title {
   font-size: 2.0em;
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
 }
 
 .accordion__container {
-  background: rgb(218, 218, 218);
   padding: 5%;
 }
 
@@ -31,7 +30,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding: 0.5em 0;
-  border-top: 0.1em solid gray;
+  border-top: 0.1em solid #B2B2B2;
   cursor: pointer;
 }
 
@@ -45,9 +44,9 @@ body {
 }
 
 .mem__img {
-  width: 80%;
+  width: 60%;
   padding-top: 0.5em;
-  transition: all .5s;
+  transition: all .3s;
   opacity: 0;
   height: 0;
 }
@@ -56,6 +55,7 @@ body {
   width: 1em;
   height: 1em;
   background-image: url("./assets/icons/cancel.svg");
+  background-size: cover;
   transform: rotate(45deg);
   transition: all .3s;
   opacity: 0;
@@ -87,7 +87,7 @@ body {
 .item__container:hover .img_5 {
   height: auto;
   opacity: 1;
-  transition: all .5s;
+  transition: all .3s;
 }
 
 .item__container:hover .icon_1,
