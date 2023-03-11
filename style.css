@@ -7,13 +7,14 @@ body {
   background: #ffffff;
   margin: 0;
   padding: 0;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
+  background: #ebe5e5;
 }
 
 .wrapper {
-  max-width: 60%;
+  max-width: 100%;
   margin: 0 auto;
-  background: #ebe5e5;
+  /* background: #ebe5e5; */
 }
 
 .title {
@@ -39,6 +40,7 @@ body {
   flex-basis: 90%;
   flex-grow: 1;
   color: #055CD9;
+  font-size: 1.0em;
   font-weight: 700;
   transition: all .3s;
 }
@@ -76,7 +78,6 @@ body {
   .accordion__container:hover .icon_3,
   .accordion__container:hover .icon_4,
   .accordion__container:hover .icon_5 {
-    height: 1em;
     transition: all .3s;
     opacity: 1;
   }
@@ -148,9 +149,43 @@ body {
   filter: invert(29%) sepia(71%) saturate(5891%) hue-rotate(210deg) brightness(89%) contrast(96%);
 }
 
+#mem_1:active ~ .img_1,
+#mem_2:active ~ .img_2,
+#mem_3:active ~ .img_3,
+#mem_4:active ~ .img_4,
+#mem_5:active ~ .img_5 {
+  opacity: 0.5;
+  transition: all .3s;
+}
 
+@media (min-width: 820px) {
+  .wrapper {
+    max-width: 90%;
+  }
+  .title {
+    font-size: 3.0em;
+  }
+  .item__title {
+    font-size: 2.0em;
+  }
+  .item__icon {
+    width: 2em;
+    height: 2em;
+  }
+}
 
-
-/* #mem_3:checked + .item__container {
-  background: #f12312;
-} */ 
+@media (min-width: 1920px) {
+  .wrapper {
+    max-width: 80%;
+  }
+  .title {
+    font-size: 4.0em;
+  }
+  .item__title {
+    font-size: 3.0em;
+  }
+  .item__icon {
+    width: 3em;
+    height: 3em;
+  }
+}
