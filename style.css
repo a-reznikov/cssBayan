@@ -38,7 +38,7 @@ body {
 .item__title {
   flex-basis: 90%;
   flex-grow: 1;
-  color: rgb(15, 124, 226);
+  color: #055CD9;
   font-weight: 700;
   transition: all .3s;
 }
@@ -65,39 +65,43 @@ body {
   display: none;
 }
 
-.accordion__container:hover .item__title {
-  color: #000000;
-  transition: all .3s;
+@media (hover: hover) {
+  .accordion__container:hover .item__title {
+    color: #000000;
+    transition: all .3s;
+  }
+  
+  .accordion__container:hover .icon_1,
+  .accordion__container:hover .icon_2,
+  .accordion__container:hover .icon_3,
+  .accordion__container:hover .icon_4,
+  .accordion__container:hover .icon_5 {
+    height: 1em;
+    transition: all .3s;
+    opacity: 1;
+  }
+  
+  .item__container:hover .img_1,
+  .item__container:hover .img_2,
+  .item__container:hover .img_3,
+  .item__container:hover .img_4,
+  .item__container:hover .img_5 {
+    height: auto;
+    opacity: 1;
+    transition: all .8s;
+  }
+  
+  .item__container:hover .icon_1,
+  .item__container:hover .icon_2,
+  .item__container:hover .icon_3,
+  .item__container:hover .icon_4,
+  .item__container:hover .icon_5 {
+    transform: rotate(0deg);
+    transition: all .5s;
+  }
 }
 
-.accordion__container:hover .icon_1,
-.accordion__container:hover .icon_2,
-.accordion__container:hover .icon_3,
-.accordion__container:hover .icon_4,
-.accordion__container:hover .icon_5 {
-  height: 1em;
-  transition: all .3s;
-  opacity: 1;
-}
 
-.item__container:hover .img_1,
-.item__container:hover .img_2,
-.item__container:hover .img_3,
-.item__container:hover .img_4,
-.item__container:hover .img_5 {
-  height: auto;
-  opacity: 1;
-  transition: all .3s;
-}
-
-.item__container:hover .icon_1,
-.item__container:hover .icon_2,
-.item__container:hover .icon_3,
-.item__container:hover .icon_4,
-.item__container:hover .icon_5 {
-  transform: rotate(0deg);
-  transition: all .3s;
-}
 
 #mem_1:checked ~ .icon_1,
 #mem_2:checked ~ .icon_2,
@@ -125,6 +129,23 @@ body {
 #mem_5:checked ~ .title_5 {
   color: #000000;
   transition: all .3s;
+}
+
+#mem_1:active ~ .title_1,
+#mem_2:active ~ .title_2,
+#mem_3:active ~ .title_3,
+#mem_4:active ~ .title_4,
+#mem_5:active ~ .title_5 {
+  color: #055CD9;
+  transition: all .3s;
+}
+
+#mem_1:active ~ .icon_1,
+#mem_2:active ~ .icon_2,
+#mem_3:active ~ .icon_3,
+#mem_4:active ~ .icon_4,
+#mem_5:active ~ .icon_5 {
+  filter: invert(29%) sepia(71%) saturate(5891%) hue-rotate(210deg) brightness(89%) contrast(96%);
 }
 
 
