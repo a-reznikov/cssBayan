@@ -12,9 +12,12 @@ body {
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 90%;
   margin: 0 auto;
-
+  min-height: 100vh;
 }
 
 .title {
@@ -159,6 +162,41 @@ body {
 #mem_5:active ~ .img_5 {
   transition: all .2s ease-out;
   opacity: 0.5;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 2%;
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 45%;
+  max-width: 9em;
+  font-size: 1em;
+}
+
+.rss-link {
+  display: block;
+  width: 6em;
+  height: 2em;
+  background-image: url("./assets/icons/rs_school.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.link-footer {
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+  transition: all .3s ease-out;
+}
+
+.link-footer:hover {
+  color: #055CD9;
 }
 
 @media (min-width: 820px) {
