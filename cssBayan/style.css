@@ -37,8 +37,9 @@ body {
 
 
 .item__title {
-  flex-basis: 90%;
+  flex-basis: 95%;
   flex-grow: 1;
+  margin-bottom: 0.5em;
   color: #055CD9;
   font-size: 1.0em;
   font-weight: 700;
@@ -46,21 +47,24 @@ body {
 }
 
 .mem__img {
-  width: 12em;
-  padding-top: 0.5em;
+  width: 0;
   opacity: 0;
   height: 0;
-  transition: all .5s ease-in;
+  transition: all .8s ease-in-out;
+  order: 3;
 }
 
 .item__icon {
+  flex-basis: 5%;
   width: 1em;
   height: 1em;
   background-image: url("./assets/icons/cancel.svg");
-  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   transform: rotate(45deg);
   transition: all .3s ease-out;
-  opacity: 0;
+  opacity: 1;
 }
 
 .radio__button {
@@ -68,6 +72,9 @@ body {
 }
 
 @media (hover: hover) {
+  .item__icon {
+    opacity: 0;
+  }
   .accordion__container:hover .item__title {
     color: #000000;
   }
@@ -85,7 +92,8 @@ body {
   .item__container:hover .img_3,
   .item__container:hover .img_4,
   .item__container:hover .img_5 {
-    height: auto;
+    width: 50%;
+    height: 50%;
     opacity: 1;
   }
   
@@ -113,7 +121,8 @@ body {
 #mem_3:checked ~ .img_3,
 #mem_4:checked ~ .img_4,
 #mem_5:checked ~ .img_5 {
-  height: auto;
+  width: 50%;
+  height: 50%;
   opacity: 1;
 }
 
@@ -155,9 +164,6 @@ body {
 @media (min-width: 820px) {
   .wrapper {
     max-width: 70%;
-  }
-  .mem__img {
-    width: 50%;
   }
   .title {
     font-size: 3.0em;
