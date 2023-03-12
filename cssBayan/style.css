@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  background: #ebe5e5;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.0em;
+  margin: 0 0 0.5em 0;
+}
+
+.accordion__container {
+  padding: 5%;
+}
+
+.item__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5em 0;
+  border-top: 0.1em solid #B2B2B2;
+  cursor: pointer;
+}
+
+
+.item__title {
+  flex-basis: 95%;
+  flex-grow: 1;
+  margin-bottom: 0.5em;
+  color: #055CD9;
+  font-size: 1.0em;
+  font-weight: 700;
+  transition: all .3s ease-out;
+}
+
+.mem__img {
+  width: 0;
+  opacity: 0;
+  height: 0;
+  transition: all .8s ease-in-out;
+  order: 3;
+}
+
+.item__icon {
+  flex-basis: 5%;
+  width: 1em;
+  height: 1em;
+  background-image: url("./assets/icons/cancel.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(45deg);
+  transition: all .3s ease-out;
+  opacity: 1;
+}
+
+.radio__button {
+  display: none;
+}
+
+@media (hover: hover) {
+  .item__icon {
+    opacity: 0;
+  }
+  .accordion__container:hover .item__title {
+    color: #000000;
+  }
+  
+  .accordion__container:hover .icon_1,
+  .accordion__container:hover .icon_2,
+  .accordion__container:hover .icon_3,
+  .accordion__container:hover .icon_4,
+  .accordion__container:hover .icon_5 {
+    opacity: 1;
+  }
+  
+  .item__container:hover .img_1,
+  .item__container:hover .img_2,
+  .item__container:hover .img_3,
+  .item__container:hover .img_4,
+  .item__container:hover .img_5 {
+    width: 50%;
+    height: 50%;
+    opacity: 1;
+  }
+  
+  .item__container:hover .icon_1,
+  .item__container:hover .icon_2,
+  .item__container:hover .icon_3,
+  .item__container:hover .icon_4,
+  .item__container:hover .icon_5 {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+#mem_1:checked ~ .icon_1,
+#mem_2:checked ~ .icon_2,
+#mem_3:checked ~ .icon_3,
+#mem_4:checked ~ .icon_4,
+#mem_5:checked ~ .icon_5 {
+  transform: rotate(0deg);
+}
+
+#mem_1:checked ~ .img_1,
+#mem_2:checked ~ .img_2,
+#mem_3:checked ~ .img_3,
+#mem_4:checked ~ .img_4,
+#mem_5:checked ~ .img_5 {
+  width: 50%;
+  height: 50%;
+  opacity: 1;
+}
+
+#mem_1:checked ~ .title_1,
+#mem_2:checked ~ .title_2,
+#mem_3:checked ~ .title_3,
+#mem_4:checked ~ .title_4,
+#mem_5:checked ~ .title_5 {
+  color: #000000;
+}
+
+#mem_1:active ~ .title_1,
+#mem_2:active ~ .title_2,
+#mem_3:active ~ .title_3,
+#mem_4:active ~ .title_4,
+#mem_5:active ~ .title_5 {
+  transition: all .2s ease-out;
+  color: #055CD9;
+}
+
+#mem_1:active ~ .icon_1,
+#mem_2:active ~ .icon_2,
+#mem_3:active ~ .icon_3,
+#mem_4:active ~ .icon_4,
+#mem_5:active ~ .icon_5 {
+  transition: all .2s ease-out;
+  filter: invert(29%) sepia(71%) saturate(5891%) hue-rotate(210deg) brightness(89%) contrast(96%);
+}
+
+#mem_1:active ~ .img_1,
+#mem_2:active ~ .img_2,
+#mem_3:active ~ .img_3,
+#mem_4:active ~ .img_4,
+#mem_5:active ~ .img_5 {
+  transition: all .2s ease-out;
+  opacity: 0.5;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 2%;
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 45%;
+  max-width: 9em;
+  font-size: 1em;
+}
+
+.rss-link {
+  display: block;
+  width: 6em;
+  height: 2em;
+  background-image: url("./assets/icons/rs_school.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.link-footer {
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+  transition: all .3s ease-out;
+}
+
+.link-footer:hover {
+  color: #055CD9;
+}
+
+@media (min-width: 820px) {
+  .wrapper {
+    max-width: 70%;
+  }
+  .title {
+    font-size: 3.0em;
+  }
+  .item__title {
+    font-size: 1.6em;
+  }
+  .item__icon {
+    width: 2em;
+    height: 2em;
+  }
+}
+
+@media (min-width: 1920px) {
+  .wrapper {
+    max-width: 50%;
+  }
+  .title {
+    font-size: 4.0em;
+  }
+  .item__title {
+    font-size: 3.0em;
+  }
+  .item__icon {
+    width: 3em;
+    height: 3em;
+  }
+}
